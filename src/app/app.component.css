@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+
+}
+
+.side-Panel{
+    border: 1px solid grey;
+    width: 20%;
+    margin-right: 10px;
+}
+
+.table{
+    width: 80%;
+}
+
+button{
+    padding: 10px;
+    background: blue;
+    color: white;
+    border: navajowhite;
+    border-radius: 5px;
+}
+
+li{
+    padding: 10px;
+}
+
+.header{
+    background-color: rgb(74, 74, 222);
+    padding: 5px;
+    margin-bottom: 5px;
+}

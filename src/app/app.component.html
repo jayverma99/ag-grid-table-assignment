@@ -1,0 +1,22 @@
+<div class="header">
+  <h2 style="text-align: center;">Ag_grid Table</h2>
+</div>
+<div class="container">
+  <div class="side-Panel">
+    <h3 style="text-align: center;">Show/Hide</h3>
+    <li *ngFor="let col of colDefs; let i = index">
+      <input type="checkbox" name="columnHide" [checked]="!col.hide" (change)="toggleColumnVisibility(i)" />
+      {{col.headerName}}
+    </li>
+  </div>
+  <div class="table">
+    <ag-grid-angular style="width: 100%; height: 500px;" class="ag-theme-alpine" [rowData]="rowData"
+      [columnDefs]="colDefs" rowSelection="single" (gridReady)="onGridReady($event)">
+    </ag-grid-angular>
+  </div>
+</div>
+
+
+<div style="margin-top: 20px; text-align: center;">
+  <button (click)="saveOrUpdateData()" class="btn btn-primary">Save/Update Data</button>
+</div>
